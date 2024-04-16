@@ -1,0 +1,388 @@
+/* DogOwnerHomepage.css */
+.dog-owner-homepage {
+  font-family: 'Arial', sans-serif;
+  color: #4c2a4c;
+  background-color: rgb(244, 244, 244,0.85);
+  padding: 20px;
+  margin-top: 130px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 300px;
+  border-radius: 15px;
+}
+
+.homepage-header {
+  background: #bfa78b;
+  padding: 15px;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.homepage-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.homepage-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #a0876e;
+}
+
+.homepage-card h3 {
+  color: #735751;
+  margin-bottom: 15px;
+}
+
+.homepage-card p {
+  line-height: 1.6;
+  color: #6e5262;
+}
+
+
+/*DogOwnerBookAppointment.css*/
+.book-appointment-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-top: 130px;
+}
+  
+.appointment-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+  
+.appointment-form input {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+  
+.book-appointment-button {
+  padding: 10px;
+  background-color: #4CAF50; 
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+  
+.book-appointment-button:hover {
+  background-color: #45a049; 
+}
+  
+/*DogOwnerCaregiversDetails.css*/
+.caretaker-page {
+  background-size: cover;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  margin-top: 130px;
+  margin-bottom: 300px;
+}
+
+.caretaker-card {
+  flex: 0 1 calc(33.333% - 40px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.caretaker-image {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  object-position: center;
+}
+
+/*DogOwnerEventLists.css*/
+.event-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+}
+  
+a {
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  max-width: 600px;
+}
+  
+.event {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: block;
+}
+  
+.event:hover, .event:focus {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background-color: #e4fa83;
+}
+  
+h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.25rem;
+}
+
+
+    
+/*DogOwnerEvents.css*/
+.event-page {
+  display: flex;
+  justify-content: space-around; /* Changed from space-between for even spacing */
+  padding: 20px;
+  gap: 20px; /* This ensures consistent spacing between flex items */
+}
+  
+.calendar-container {
+  padding: 10px; /* Padding makes the content inside look nicer */
+  width: 300px; /* Fixed width for the calendar */
+  /* Removed height to let the calendar determine its own height based on content */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  border-radius: 8px; /* Rounded corners for the container */
+  overflow: hidden; /* In case the calendar has overflowing content */
+}
+
+.event-list {
+  margin-top: 130px;
+  flex: 3; /* Takes up remaining space */
+  margin-right: 100px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Consistent shadow with calendar */
+  border-radius: 8px; /* Consistent rounded corners */
+}
+
+.event {
+  background: #fff;
+  padding: 20px; /* Increased padding for a better look */
+  margin-bottom: 10px;
+  border-radius: 4px; /* Consistent with the container's rounded corners */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Subtle shadow for each event */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for hover effect */
+}
+
+.event:hover {
+  transform: translateY(-2px); /* Slight raise effect on hover */
+  box-shadow: 0 4px 6px rgba(8, 8, 8, 0.1); /* Increased shadow on hover */
+}
+
+/* Add a global style for react-calendar to ensure it fits well in the container */
+.react-calendar {
+  border: none; /* Remove default border */
+  max-width: 100%; /* Ensure it doesn't overflow the container */
+  font-size: 0.85em; /* Adjust font size as necessary */
+}
+
+   
+/*DogOwnerProfile.css*/
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin-top: 120px;
+}
+  
+.profile-section, .dog-section {
+  background: rgba(27, 27, 27, 0.7);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  width: 90%; 
+  max-width: 600px; 
+  margin: 10px auto;
+  color: white; /* Sets the text color to white */
+}
+
+  
+.profile-title {
+  color: #f8f6f6;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center; 
+}
+  
+input[type="text"], input[type="email"], input[type="tel"], textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; 
+}
+  
+.update-button, .update-dog-details, .logout-button {
+  width: 100%; 
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s; 
+}
+  
+.update-button, .update-dog-details {
+  background-color: #e9fa86; 
+  color: rgb(31, 30, 30);
+}
+  
+.update-button:hover, .update-dog-details:hover, .logout-button:hover {
+  opacity: 0.7; 
+}
+  
+.logout-button {
+  background-color: #dc3545;
+  color: white;
+  padding: 10px 100px; /* Adjusts the padding around the text */
+  font-size: 16px; /* Adjusts the font size of the text */
+  border: none; /* Optional: Removes the border */
+  border-radius: 5px; /* Optional: Rounds the corners of the button */
+}
+
+
+/*DogOwnerReg.css*/
+.signup-form-container {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px; 
+  margin: auto; 
+  margin-top: 13%;
+}
+  
+.signup-form-container h2 {
+  margin-bottom: 20px;
+}
+  
+.signup-form-container form {
+  display: flex;
+  flex-direction: column;
+}
+  
+.signup-form-container input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+  
+.signup-form-container button {
+  background-color: #4CAF50; 
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+  
+.signup-form-container button:hover {
+  opacity: 0.9;
+}
+  
+/*DogOwnerViewAppointments.css*/
+.appointments-page {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12%;
+  margin-top: 130px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+  
+.appointment {
+  background: rgba(255, 255, 255, 1.0);
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+  
+.appointment.pending {
+  border: 4px solid gold; 
+}
+  
+.appointment.accepted {
+  border: 4px solid green; 
+}
+  
+.appointment.declined {
+  border: 4px solid red; 
+}
+  
+.appointment-name,
+.appointment-status,
+.appointment-expires,
+.appointment-date {
+  margin-right: 10px;
+}
+  
+.preview-request {
+  padding: 5px 10px;
+  background-color: #4CAF50; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+  
+.preview-request:hover {
+  background-color: #45a049; 
+}
+  
+.filter-buttons button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  background-color:rgb(0, 0, 0) ; 
+  border: 2px solid #ddd; 
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filter-buttons button:hover
+{
+  color:burlywood; 
+}
+
+.filter-buttons button:hover {
+  border-color: #ccc; 
+}
+  
+.filter-buttons .active {
+  background-color: #f0f0f0;
+  border-color: #bbb; 
+}
+  
+
+
+

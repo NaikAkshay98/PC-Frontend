@@ -1,0 +1,619 @@
+/*HeroSection.css*/
+.hero-section {
+  position: relative;
+  width: 85%; 
+  max-width: 1900px; 
+  height: 500px; 
+  
+  margin: 20px auto; 
+  margin-top: 120px;
+  
+  overflow: hidden;
+  border-radius: 10px; 
+}
+  
+.slide {
+  display: none;
+  width: 100%;
+  height: 100%; 
+  transition: opacity 0.5s ease-in-out;
+}
+  
+.slide.active {
+  display: block;
+  opacity: 1;
+}
+  
+.slide img {
+  width: 100%;
+  height: 100%; 
+  object-fit: content; 
+}
+  
+@keyframes fade {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+  
+.slide.active {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+/*About Us*/
+.about-us {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: white;
+  padding: 20px;
+  margin: 20px auto;
+  margin-top: 110px;
+  max-width: 1000px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-us h1,
+.about-us h2 {
+  text-align: center;
+  color: #f0f0f0;
+  margin-bottom: 1em;
+}
+
+.about-us p {
+  text-align: justify;
+  margin-bottom: 1em;
+}
+
+.meet-the-team,
+.our-vision {
+  margin-bottom: 2em;
+}
+
+.team-members {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-member img {
+  display: block;
+  width: 80%;
+  height: auto; 
+  object-fit: cover;
+}
+
+.team-member h3 {
+  text-align: center; 
+  color: #f0f0f0;
+  margin-top: 0.5em;
+}
+
+/*Event.css*/
+.event-page {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin-bottom: 15%;
+  margin-left: 30px;
+}
+/* Calendar Container */
+.calendar-container {
+  flex: 1;
+  width: 60%;
+  margin-top: 110px;
+  margin-left: 30px;
+}
+
+/* Calendar Navigation */
+.react-calendar__navigation {
+  background: #a0876e;
+  color: #ffffff;
+  
+}
+
+/* Calendar Main Style */
+.react-calendar {
+  background: #d9c2ae;
+  max-height: none;
+  color: #4c2a4c;
+  border: none; /* Remove default border */
+}
+
+/* Weekdays (Sun, Mon, Tue, ...) */
+.react-calendar__month-view__weekdays {
+  background: #c1a594;
+  color: #ffffff;
+  text-align: center;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  padding: 10px 0;
+}
+
+/* Tiles */
+.react-calendar .react-calendar__tile {
+  background: #e4d4c8;
+  color: #4c2a4c;
+  border-radius: 8px; /* Rounded corners for the date tiles */
+}
+
+/* Highlight Today */
+.react-calendar .react-calendar__tile--now {
+  background: #9c7f67;
+  color: #ffffff;
+  font-weight: bold; /* Make the font bold for today */
+}
+
+/* Highlight Active/Selected Date */
+.react-calendar__tile--active {
+  background: #9c7f67;
+  color: #ffffff;
+  border: 1px solid #a0876e;
+}
+
+/* Hover and Focus Styles */
+.react-calendar .react-calendar__tile:enabled:hover,
+.react-calendar .react-calendar__tile:enabled:focus {
+  background: #a0876e;
+  color: #ffffff;
+}
+
+/* Highlight Event Days */
+.react-calendar .event-day {
+  background: #a0876e; /* Color for days with events */
+  color: #ffffff; /* Text color for days with events */
+}
+
+/* Abbr within tiles (for a11y) */
+.react-calendar__tile abbr {
+  text-decoration: none; /* Remove underline from abbr element */
+}
+
+/* Disabled tile */
+.react-calendar .react-calendar__tile--disabled {
+  background: #dcdcdc;
+  color: #9c9c9c;
+  cursor: not-allowed;
+}
+
+/* Calendar Tile Content */
+.react-calendar__tile-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Adjust the height of each row of the calendar to make it uniform */
+.react-calendar__month-view__days__day {
+  height: 100px; /* Or any height that fits your design */
+}
+    /*
+.calendar-container {
+  flex: 1;
+  width: 50%;
+  margin-top: 110px;
+}
+
+.react-calendar__navigation {
+  background: #a0876e;
+  color: #ffffff;
+}
+
+.react-calendar {
+  background: #d9c2ae;
+  color: #4c2a4c;
+}
+
+.react-calendar__month-view__weekdays {
+  background: #c1a594;
+  color: #ffffff;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  padding: 10px 0;
+}
+
+.react-calendar .react-calendar__tile {
+  background: #e4d4c8;
+  color: #4c2a4c;
+}
+
+.react-calendar__tile--active {
+  background: #9c7f67;
+  color: #ffffff;
+}
+
+.schedule-container .react-calendar .react-calendar__tile--now,
+.today {
+  background: #9c7f67;
+  color: #ffffff;
+  border: 1px solid #a0876e;
+}
+.event-day {
+  background: #a0876e; 
+  color: #ffffff;
+}
+
+.schedule-container .react-calendar .react-calendar__tile--now:enabled:hover,
+.schedule-container .react-calendar .react-calendar__tile--now:enabled:focus {
+  background: #a0876e;
+  color: #ffffff;
+}*/
+
+.event {
+  background: rgba(255, 255, 255, 0.5); 
+  padding: 20px;
+  margin-bottom: 10px; 
+  border-radius: 20px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  backdrop-filter: blur(10px); 
+  color: #333;
+  font-size: 0.6rem; 
+  transition: background-color 0.3s ease; 
+}
+
+.event:hover {
+  background: rgba(255, 255, 255, 0.75);
+}
+
+
+.event-list {
+  flex: 2;
+  margin-top: 60px;
+  margin-right: 15px;
+  margin-left: 30px;
+  max-width: 1000px;
+  max-height: 400px; /* Adjust based on your preference */
+  overflow-y: auto; /* Enables vertical scrolling */
+  scrollbar-width: thin; /* Optional: makes the scrollbar thinner */
+  scrollbar-color: rgba(160, 135, 110, 0.7) transparent;
+}
+
+/* Styles for Webkit browsers like Chrome, Safari */
+.event-list::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.event-list::-webkit-scrollbar-track {
+  background: #e4d4c8; /* Color of the scrollbar track */
+}
+
+.event-list::-webkit-scrollbar-thumb {
+  background-color: #a0876e;
+  border-radius: 20px; 
+  border: 3px solid #e4d4c8; 
+}
+
+
+/* Registration.css */
+.register-container {
+  max-width: 350px;
+  margin: 30px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); 
+  text-align: center;
+  margin-top: 13%;
+  margin-bottom: 8%;
+}
+  
+ 
+.register-title {
+  font-size: 24px;
+  color: #333333; 
+  margin-bottom: 20px; 
+}
+  
+.register-button {
+  background-color: #c8c4c4; 
+  color: #333333; 
+  padding: 10px 20px;
+  margin: 10px 0; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block; 
+  width: calc(100% - 40px); 
+  box-sizing: border-box; 
+  transition: background-color 0.3s ease; 
+}
+  
+.register-button:hover {
+  background-color: #dcdcdc; 
+}
+
+/*categorysection*/
+.category-section {
+  background-color: rgba(234, 222, 208, 0.7);
+  border-radius: 15px; 
+  color: #4c2a4c; 
+  padding: 40px;
+  text-align: center;
+  margin-left: 95px;
+  margin-right: 95px;
+}
+  
+.category-section h2 {
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  color: #735751; 
+}
+  
+.categories {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap; 
+}
+  
+.category {
+  width: 22%; 
+  padding: 15px;
+  margin: 10px; 
+  background-color: #cfad86; 
+  border-radius: 8px; 
+}
+  
+.category img {
+  width: auto; 
+  max-width: 120px; 
+  height: auto; 
+  margin-bottom: 15px;
+}
+  
+.category h3 {
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  color: #4c2a4c; 
+}
+  
+.category p {
+  font-size: 1em;
+  color: #4c2a4c; 
+}
+  
+@media (max-width: 1024px) {
+  .categories {
+    justify-content: center;
+  }
+  .category {
+    width: 45%; 
+  }
+}
+  
+@media (max-width: 768px) {
+  .category {
+    width: 90%; 
+    margin-bottom: 20px;
+  }
+}
+    
+/* Separator styles */
+.separator {
+  font-size: 16px;
+  color: #333333; 
+  margin: 20px 0;
+  position: relative;
+}
+  
+.separator:after,
+.separator:before {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 40%;
+  background: #d1d1d1; 
+  position: absolute;
+  top: 50%;
+}
+  
+.separator:before {
+  left: 0;
+}
+  
+.separator:after {
+  right: 0;
+}
+ 
+.separator-text {
+  display: inline-block;
+  padding: 0 10px;
+  position: relative;
+  z-index: 1; 
+}
+  
+  /*signin.css*/
+.signin-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+   
+  margin-top: 110px;
+}
+  
+.signin-form {
+  background: rgba(255, 255, 255, 0.9); 
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px; 
+  
+}
+  
+.form-inner {
+  display: flex;
+  flex-direction: column;
+}
+  
+.signin-form p {
+  background: #FFFFE0; 
+  border-left: 3px solid #FFD700; 
+  padding: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+  
+.signin-form input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+  
+.signin-button {
+  background-color: #4CAF50; 
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+  
+.signin-button:hover {
+  background-color: #45a049; 
+}
+
+.signin-footer {
+  display: flex;
+  justify-content: space-between;
+}
+  
+.signin-footer button {
+  background: none;
+  border: none;
+  color: #007bff; 
+  cursor: pointer;
+  padding: 5px;
+  text-decoration: underline;
+}
+  
+.signin-footer button:hover {
+  color: #0056b3; 
+}
+  
+.credentials-message {
+  text-align: center;
+  color: #FF4500; 
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
+/*Support.css*/
+.support-form-container {
+  background: linear-gradient(to top, #a0876e, #e4d4c8);
+  padding: 40px;
+  width: 100%;
+  
+  max-width: 480px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 40px auto;
+  margin-top: 110px;
+}
+  
+.support-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+}
+  
+.form-group {
+  display: flex;
+  flex-direction: column;
+  
+}
+  
+.support-form label {
+  font-size: 1rem;
+  color: #735751;
+  margin-bottom: 10px;
+  
+}
+  
+.support-form input,
+.support-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  
+}
+  
+.support-form h3 {
+  color: #735751;
+  margin-bottom: 20px;
+  
+}
+  
+.submit-button {
+  background-color: #735751;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+}
+  
+.submit-button:hover {    
+  background-color: #6e5262;
+}
+  
+/*Events*/
+/* EventDetail.css */
+.event-details-container {
+  margin-top: 130px; /* Adjust this value to match the height of your header, including any top padding */
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9); /* Increased opacity for better readability */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds shadow for depth */
+  max-width: 80%; /* Optional: contains the width for larger screens */
+  margin-left: auto; /* Centers the container */
+  margin-right: auto; /* Centers the container */
+}
+
+.event-title {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-align: center; /* Centers the title */
+}
+
+.event-info {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 16px;
+  color: #444; /* Slightly darker text for readability */
+}
+
+.event-info span {
+  font-weight: bold;
+}
+
+.event-image {
+  width: 100%; /* Full width of the container */
+  max-width: 600px; /* Adjust this to fit your design */
+  height: auto; /* Keeps the aspect ratio of the image */
+  border-radius: 8px; /* Rounded corners for the image */
+  display: block; /* Ensures the image is a block-level element */
+  margin: 20px auto; /* Centers the image and adds spacing */
+}
+
+/* Clearfix for floated elements */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+

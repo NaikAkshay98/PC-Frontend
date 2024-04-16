@@ -1,0 +1,455 @@
+/* Caretaker Home Page */
+.caretaker-dashboard {
+  font-family: 'Arial', sans-serif;
+  color: #4c2a4c;
+  
+  background-color: rgb(244, 244, 244,0.85);
+  padding: 20px;
+  margin-top: 130px;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-radius: 15px;
+}
+
+.dashboard-header {
+  background: #bfa78b;
+  padding: 15px;
+  color: rgb(44, 42, 42);
+  text-align: center;
+  border-radius: 8px;
+  
+  margin-bottom: 30px;
+}
+
+.dashboard-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.dashboard-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #a0876e;
+}
+
+.dashboard-card h3 {
+  color: #735751;
+  margin-bottom: 15px;
+}
+
+.dashboard-card p {
+  line-height: 1.6;
+  color: #6e5262;
+}
+
+@media (max-width: 768px) {
+  .dashboard-overview {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/*CaretakerAppointmentReq.css*/
+.appointment-requests-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 130px;
+    margin-bottom: 20%;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  
+.request-card {
+  display: flex;
+  
+  .button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s;
+  }
+
+  .button:hover {
+    opacity: 0.9;
+  }
+
+  .green-button {
+    background-color: #4CAF50;
+  }
+
+  .red-button {
+    background-color: #dc3545;
+  }
+
+  .blue-button {
+    background-color: #007bff;
+  }
+
+  .blue-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .transparent-bg {
+    background: rgba(255, 255, 255, 0.5);
+  }
+
+  .appointment-requests-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20%;
+  }
+
+  .request-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 5px;
+    background: rgba(255, 255, 255, 0.5); 
+    border-radius: 4px;
+  }
+
+  .request-name {
+    font-weight: bold;
+  }
+
+  .request-status {
+    padding: 2px 5px;
+    border-radius: 4px;
+    color: white;
+  }
+
+  .request-status.pending {
+    background-color: #ffc107;
+  }
+
+  .request-status.declined {
+    background-color: #dc3545;
+  }
+
+  .request-status.accepted {
+    background-color: #28a745;
+  }
+
+  .preview-request-button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .filters {
+    margin-top: 130px;
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 10px;
+    
+  }
+
+  .filter-button {
+    
+    margin-right: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .filter-button.active {
+    background-color: #007bff;
+    color: white;
+  }
+
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 5px;
+  background: rgba(255, 255, 255, 0.5); 
+  border-radius: 4px;
+}
+  
+.request-name {
+  font-weight: bold;
+}
+  
+.request-status {
+  padding: 2px 5px;
+  border-radius: 4px;
+  color: white;
+}
+  
+.request-status.pending {
+  background-color: #ffc107; 
+}
+  
+.request-status.declined {
+  background-color: #dc3545; 
+}
+  
+.request-status.accepted {
+  background-color: #28a745; 
+}
+ 
+.preview-request-button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filters {
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 10px;
+}
+  
+.filter-button {
+  margin-right: 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+  
+.filter-button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+/*CaretakerHomePage.css*/
+.dashboard-container {
+  max-width: 800px;
+  margin: auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h1.welcome-message {
+  color: #333;
+  font-size: 24px;
+}
+
+section {
+  border-bottom: 1px solid #eee;
+  padding: 20px 0;
+}
+
+h2 {
+  color: #444;
+  font-size: 20px;
+}
+
+p {
+  color: #666;
+  margin: 10px 0;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* CaretakerProfile.css */
+.caretaker-profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9); 
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px; 
+  margin: 0 auto;
+  margin-top: 130px;
+}
+  
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%; 
+  max-width: 500px; 
+}
+  
+form label {
+  margin: 10px 0;
+}
+  
+form input[type="file"],
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+  
+form button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #4CAF50; 
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+  
+.certificate-approved {
+  margin-top: 20px;
+  background: rgba(0, 128, 0, 0.3); 
+  padding: 15px;
+  border-radius: 4px;
+}
+  
+.certificate-approved strong {
+  display: block;
+  margin-bottom: 10px;
+}
+  
+.certificate-approved ul {
+  padding-left: 20px;
+}
+  
+.logout-button {
+  padding: 10px 20px;
+  margin-top: 20px; 
+  background-color: #dc3545; 
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+  
+
+  /*CaretakerReg.css*/
+.signup-form-container {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px; 
+  margin: auto; 
+}
+  
+.signup-form-container h2 {
+  margin-bottom: 20px;
+}
+  
+.signup-form-container form {
+  display: flex;
+  flex-direction: column;
+}
+  
+.signup-form-container input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+  
+.signup-form-container button {
+  background-color: #4CAF50; 
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+  
+.signup-form-container button:hover {
+  opacity: 0.9;
+}
+  
+/* CaretakerSchedule.css */
+.schedule-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  margin-top: 130px;
+}
+  
+  
+.add-update-schedule-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+  
+.appointments-container {
+  width: 50%;
+}
+  
+.appointment-card {
+  background: rgba(255, 255, 255, 0.9);
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.user-profile-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.user-profile-title {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.user-profile-detail {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.user-profile-button {
+  display: block;
+  width: calc(100% - 40px);
+  padding: 10px 20px;
+  margin: 20px auto;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.user-profile-button:hover {
+  background-color: #0056b3;
+}

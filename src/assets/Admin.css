@@ -1,0 +1,461 @@
+/* Base Admin Layout */
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f0f2f5; /* Light grey background for the entire admin layout */
+}
+
+/* Sidebar Styles */
+.admin-sidebar {
+  width: 250px;
+  background-color: rgba(34, 34, 34, 0.9); /* Semi-transparent dark background */
+  color: #ffffff; /* White text color */
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto;
+  backdrop-filter: blur(10px); /* Apply a blur to the content below the sidebar */
+  border-right: 1px solid rgba(7, 7, 7, 0.1); /* Add a subtle border */
+  box-shadow: 3px 0 15px rgba(0,0,0,0.2); /* Soft shadow to the right side */
+}
+
+.admin-sidebar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(28, 28, 29, 0.75), rgba(12, 12, 14, 0.75), rgba(28, 25, 31, 0.75)); /* Cool gradient overlay */
+  opacity: 0.85; /* Adjust opacity for gradient */
+  z-index: -1;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.admin-sidebar .admin-menu {
+  list-style-type: none; /* Removes bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+.admin-sidebar .admin-menu li a {
+  display: block;
+  padding: 15px 20px;
+  color: #ffffff; /* White text color */
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.admin-sidebar .admin-menu li a:hover, .admin-sidebar .admin-menu li a.active {
+  background-color: rgba(255, 255, 255, 0.2); /* Lighten on hover/active */
+  border-left: 3px solid rgba(255, 255, 255, 0.5); /* Highlight effect */
+}
+
+/* Main Content Styles */
+.admin-main-content {
+  flex-grow: 1;
+  padding: 20px;
+  margin-left: 250px; /* Make sure this matches the sidebar width */
+  background-color: #ffffff; /* White background for the content */
+}
+.Admin-dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  height: 200px; /* Set a specific height for the container */
+}
+
+  
+  .AdminCard {
+    height: 80px;
+    width: 190px;
+    margin-top: 20px;
+    background-color: #fca1a1;
+    border-radius: 5px;
+    text-align: center;
+    
+    padding: 20px;
+    display: inline-block;
+  }
+/* Certificate Text Styling */
+.certificate-text h2, .certificate-text p {
+  margin: 0 0 15px;
+}
+
+.certificate-text p strong {
+  display: block; /* Makes the name and trainer name stand out on their own line */
+}
+
+/* Action Button Styles */
+.certificates-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .certificate {
+    background-color: #f8f9fa; /* Light grey background */
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .certificate .certificate-id {
+    font-weight: bold;
+  }
+  
+.certificate-actions {
+  margin-top: 20px;
+}
+
+.certificate-text {
+    text-align: center;
+    display: block; /* Makes the name and trainer name stand out on their own line */
+  }
+
+.certificate-actions button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  background-color: #007bff; /* Bootstrap primary blue */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.certificate-actions button:hover {
+  background-color: #0056b3; /* Darker shade for hover state */
+}
+
+.review {
+    background: #fff; /* White background for each review */
+    border: 1px solid #ddd; /* Light grey border */
+    margin-bottom: 10px; /* Space between reviews */
+    padding: 15px; /* Padding inside each review */
+    border-radius: 4px; /* Rounded corners for polish */
+  }
+  
+  .review h3 {
+    margin-bottom: 5px; /* Space between the reviewer's name and the message */
+    color: #333; /* Dark grey for text */
+  }
+  
+  .review p {
+    font-size: 1rem; /* Standard font size for the message */
+    margin-bottom: 10px; /* Space between the message and the button */
+    color: #666; /* Medium grey for text */
+  }
+
+  .user-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .user-management {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .user-management button {
+    padding: 5px 10px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    min-width: 100px; /* Set a minimum width for all buttons */
+    height: 40px; /* Set a fixed height for all buttons */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Style buttons based on the status */
+  .user-management button.modify {
+    background-color: #ffc107; /* Bootstrap warning color */
+    color: white;
+  }
+  
+  .user-management button.activate {
+    background-color: #28a745; /* Bootstrap success color */
+    color: white;
+  }
+  
+  .user-management button.deactivate {
+    background-color: #dc3545; /* Bootstrap danger color */
+    color: white;
+  }
+  
+  /* Disable buttons based on user status */
+  .user-management button[disabled] {
+    opacity: 0.65;
+    cursor: not-allowed;
+  }
+  
+.event-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .event-form input, .event-form button {
+    margin: 5px 0; /* Spacing between form elements */
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .event-form button {
+    background-color: #007bff; /* Bootstrap primary blue */
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .event-form button:hover {
+    background-color: #0056b3; /* Darker shade for hover state */
+  }
+  
+  .events-list .event {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .events-list .event button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #0056b3; /* Bootstrap success color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .events-list .event button:hover {
+    background-color: #0056b3; /* A darker shade for hover */
+  }
+  .events-list button:hover {
+    background-color: #0056b3; /* A darker shade for hover */
+  }
+  
+  .cases-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .case {
+    background: #f8f9fa; /* Light background for each case */
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .status-button {
+    padding: 5px 15px; /* Adjust padding as needed */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    text-transform: capitalize; /* Ensure status text is properly capitalized */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px; /* Fixed width for consistency */
+    height: 30px; /* Fixed height for consistency */
+  }
+  
+  .status-button.open {
+    background-color: #ffc107; /* Yellow for open cases */
+  }
+  
+  .status-button.closed {
+    background-color: #dc3545; /* Red for closed cases */
+  }
+  
+  .status-button.solved {
+    background-color: #28a745; /* Green for solved cases */
+  }
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .admin-sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    backdrop-filter: none;
+    box-shadow: none;
+    border-right: none;
+  }
+
+  .admin-sidebar::before {
+    display: none; /* Remove gradient on small screens for better readability */
+  }
+
+  .admin-main-content {
+    margin-left: 0;
+    padding: 10px;
+  }
+}
+
+/* AdminEmailSupport.css - Styles for the admin panel and cases list */
+.admin-layout {
+  display: flex;
+}
+
+.admin-sidebar {
+  /* Adjust width as needed */
+  width: 200px;
+  background-color: #f2f2f2;
+}
+
+.admin-main-content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.search-container {
+  margin-bottom: 20px;
+}
+
+.cases-list {
+  list-style: none;
+  padding: 0;
+}
+
+.case {
+  background-color: #fff;
+  border-bottom: 1px solid #e1e1e1;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status-button {
+  padding: 5px 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.status-button {
+  padding: 5px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  margin-right: 10px; /* Add space between buttons */
+}
+
+.status-button.solved {
+  background-color: #28a745; /* Green */
+}
+
+.status-button.unsolved {
+  background-color: #dc3545; /* Red */
+}
+
+.status-button:hover {
+  opacity: 0.8;
+}
+
+/* InquiryDetail.css - Styles for the inquiry detail page */
+.inquiry-detail {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.inquiry-detail h1 {
+  margin-top: 0;
+}
+
+.inquiry-detail button {
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Green, change as needed */
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.inquiry-detail button:hover {
+  background-color: #45a049; /* A darker green */
+}
+
+.error-message {
+  color: #f44336; /* Red, indicating an error */
+}
+/* AdminInquiryDetail.css - Additional styles for the admin inquiry detail page */
+
+.inquiry-detail-container {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.inquiry-detail-header {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.inquiry-detail-body {
+  margin-bottom: 20px;
+}
+
+.inquiry-detail-label {
+  font-weight: bold;
+}
+
+.inquiry-detail-content {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.inquiry-detail-button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.inquiry-detail-button:hover {
+  background-color: #45a049;
+}
+
+.error-message {
+  color: #f44336;
+  margin-top: 20px;
+}
